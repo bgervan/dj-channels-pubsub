@@ -1,0 +1,2 @@
+channels<4
+google-cloud-pubsub==2.7.0
