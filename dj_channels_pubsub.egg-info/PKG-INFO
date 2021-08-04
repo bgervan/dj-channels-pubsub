@@ -1,0 +1,122 @@
+Metadata-Version: 2.1
+Name: dj-channels-pubsub
+Version: 0.1.0
+Summary: Django Channels Layer for Google PubSub
+Home-page: https://github.com/bgervan/dj-channels-pubsub
+Author: Benjamin Gervan
+Author-email: bgervan@webstormit.com
+License: MIT
+Keywords: dj-channels-pubsub
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Django :: 2.1
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+License-File: LICENSE
+License-File: AUTHORS.rst
+
+=============================
+Django Channels PubSub
+=============================
+
+.. image:: https://badge.fury.io/py/dj-channels-pubsub.svg
+    :target: https://badge.fury.io/py/dj-channels-pubsub
+
+.. image:: https://travis-ci.org/bgervan/dj-channels-pubsub.svg?branch=master
+    :target: https://travis-ci.org/bgervan/dj-channels-pubsub
+
+.. image:: https://codecov.io/gh/bgervan/dj-channels-pubsub/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/bgervan/dj-channels-pubsub
+
+Django Channels Layer for Google PubSub
+
+Documentation
+-------------
+
+The full documentation is at https://dj-channels-pubsub.readthedocs.io.
+
+Quickstart
+----------
+
+Install Django Channels PubSub::
+
+    pip install dj-channels-pubsub
+
+Add it to your `INSTALLED_APPS`:
+
+.. code-block:: python
+
+    INSTALLED_APPS = (
+        ...
+        'dj_channels_pubsub.apps.DjChannelsPubsubConfig',
+        ...
+    )
+
+Add Django Channels PubSub's URL patterns:
+
+.. code-block:: python
+
+    from dj_channels_pubsub import urls as dj_channels_pubsub_urls
+
+
+    urlpatterns = [
+        ...
+        url(r'^', include(dj_channels_pubsub_urls)),
+        ...
+    ]
+
+Features
+--------
+
+* TODO
+
+Running Tests
+-------------
+
+Does the code actually work?
+
+::
+
+    source <YOURVIRTUALENV>/bin/activate
+    (myenv) $ pip install tox
+    (myenv) $ tox
+
+
+Development commands
+---------------------
+
+::
+
+    pip install -r requirements_dev.txt
+    invoke -l
+
+
+Credits
+-------
+
+Tools used in rendering this package:
+
+*  Cookiecutter_
+*  `cookiecutter-djangopackage`_
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`cookiecutter-djangopackage`: https://github.com/pydanny/cookiecutter-djangopackage
+
+
+
+
+History
+-------
+
+0.1.0 (2021-08-04)
+++++++++++++++++++
+
+* First release on PyPI.
+
+
